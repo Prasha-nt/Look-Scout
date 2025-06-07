@@ -11,8 +11,17 @@ export interface InputProps
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, animated = false, ...props }, ref) => {
     if (animated) {
-      // Destructure and remove the conflicting React prop.
-      const { onAnimationStart, ...rest } = props;
+      // Destructure and remove the conflicting React props that MotionProps handles differently.
+      const {
+        onAnimationStart, // Already handled
+        onDragStart,      // Add this
+        onDragEnd,        // Add this if you might use drag
+        onDrag,           // Add this if you might use drag
+        onFocus,          // Add this if you might use motion's focus handlers
+        onBlur,           // Add this if you might use motion's blur handlers
+        // Add any other conflicting event handlers here as needed
+        ...rest
+      } = props;
 
       return (
         <motion.input
