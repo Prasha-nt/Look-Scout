@@ -11,6 +11,9 @@ export interface InputProps
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, animated = false, ...props }, ref) => {
     if (animated) {
+      // Destructure and remove the conflicting React prop.
+      const { onAnimationStart, ...rest } = props;
+
       return (
         <motion.input
           type={type}
@@ -21,11 +24,12 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           whileFocus={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          {...props}
+          // Spread the remaining, non-conflicting props.
+          {...rest}
         />
       )
     }
-    
+
     return (
       <input
         type={type}
