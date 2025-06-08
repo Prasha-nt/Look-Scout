@@ -635,6 +635,9 @@ video {
 .z-10 {
   z-index: 10;
 }
+.z-50 {
+  z-index: 50;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -800,6 +803,9 @@ video {
 }
 .max-w-xs {
   max-width: 20rem;
+}
+.max-w-\[400px\] {
+  max-width: 400px;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1171,6 +1177,9 @@ video {
 .pt-4 {
   padding-top: 1rem;
 }
+.text-left {
+  text-align: left;
+}
 .text-center {
   text-align: center;
 }
@@ -1317,12 +1326,12 @@ video {
 .ring-offset-background {
   --tw-ring-offset-color: hsl(var(--background));
 }
-.blur-xl {
-  --tw-blur: blur(24px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
 .blur {
   --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.blur-xl {
+  --tw-blur: blur(24px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .brightness-0 {
@@ -1610,6 +1619,10 @@ html {
 
 @media (min-width: 768px) {
 
+  .md\:max-w-\[500px\] {
+    max-width: 500px;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1668,6 +1681,10 @@ html {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:max-w-\[560px\] {
+    max-width: 560px;
   }
 
   .lg\:grid-cols-3 {

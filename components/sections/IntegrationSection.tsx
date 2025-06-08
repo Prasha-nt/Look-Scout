@@ -30,35 +30,33 @@ export const IntegrationSection = (): JSX.Element => {
     <section className="py-20 bg-gradient-to-b from-gray-950 to-gray-900">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Image Section */}
+          
+          {/* Image Section - visible on all devices now */}
           <motion.div 
-            className="flex-1 relative"
+            className="flex-1 relative w-full"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <motion.div
-              className="relative"
+              className="relative w-full flex justify-center"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              {/* Desktop Image */}
-              <div className="hidden lg:block">
-                <Image
-                  src="/Photores.png"
-                  alt="Product features illustration"
-                  width={560}
-                  height={560}
-                  className="rounded-2xl"
-                />
-              </div>
+              <Image
+                src="/Photores.png"
+                alt="Product features illustration"
+                width={560}
+                height={560}
+                className="rounded-2xl w-full max-w-[400px] md:max-w-[500px] lg:max-w-[560px]"
+              />
             </motion.div>
           </motion.div>
 
           {/* Feature Cards */}
           <motion.div 
-            className="flex-1 space-y-8"
+            className="flex-1 space-y-8 w-full"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -74,6 +72,7 @@ export const IntegrationSection = (): JSX.Element => {
               >
                 <Card className="bg-transparent border-0 shadow-none group hover:bg-gray-800/30 transition-all duration-300 rounded-xl p-6">
                   <CardContent className="flex items-start gap-6 p-0">
+                    
                     {/* Icon Image */}
                     <motion.div 
                       className="flex-shrink-0"
@@ -89,7 +88,7 @@ export const IntegrationSection = (): JSX.Element => {
                       />
                     </motion.div>
 
-                    {/* Content */}
+                    {/* Text Content */}
                     <div className="flex-1 space-y-3">
                       <h3 className="text-xl font-semibold text-neutral-200 group-hover:text-white transition-colors">
                         {feature.title}
