@@ -61,7 +61,9 @@ export const HeroSection = (): JSX.Element => {
   }
 
   return (
-    <section className="flex flex-col items-center justify-center relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 w-full min-h-screen overflow-hidden">
+    // <section className="flex flex-col items-center justify-center relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 w-full min-h-screen overflow-hidden">
+    <section className="flex flex-col items-center justify-center relative bg-gradient-to-br from-[#3971E7] via-[#3971E7] to-[#3971E7] w-full min-h-screen overflow-hidden">
+
 
       {/* Floating Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -167,8 +169,8 @@ export const HeroSection = (): JSX.Element => {
 
         {/* Right Image */}
         <motion.div className="flex-1 flex justify-end">
-          <div className="relative w-full max-w-lg">
-            <Image src="/Heropro.png" alt="Hero" width={500} height={500} className="rounded-2xl" />
+          <div className="relative w-full max-w-lg ">
+            <Image src="/Heropro1.png" alt="Hero" width={500} height={500} className="rounded-2xl" />
           </div>
         </motion.div>
       </div>
