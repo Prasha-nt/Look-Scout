@@ -151,9 +151,13 @@ export const HeroSection = (): JSX.Element => {
           <p className="text-lg text-primary-200 mb-8 max-w-xl">
             We've been told it is not possible to overachieve our customers' expectations. We have not reinvented the wheel, we decided to build upon it.
           </p>
-          <Button onClick={handleSendNotification} className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 text-lg">
-            Send Notification
-          </Button>
+
+          {/* Ensure Button is Visible in Mobile Mode */}
+          <div className="block lg:hidden">
+            <Button onClick={handleSendNotification} className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 text-lg">
+              Send Notification
+            </Button>
+          </div>
 
           <div className="mt-12">
             <h3 className="text-sm font-medium text-white mb-4">Who supports us</h3>
